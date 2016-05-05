@@ -1,0 +1,13 @@
+{
+  "title": "Voltage Divider",
+  "jumpers": [ 3, 4, 5 ],
+  "components": {
+    "comp3": [ "R1", "Resistor" ],
+    "comp4": [ "R2", "Resistor" ]
+    },
+  "pins": [
+    "Vin * R2 / (R1 + R2)",
+    "Gnd",
+    "Vin"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "3.3V LDO Regulator",
+  "jumpers": [ 3, 4, 5 ],
+  "components": {
+    "comp1": [ "U1", "MCP1702 (3.3V)" ],
+    "comp3": [ "C1", "1uF" ],
+    "comp4": [ "C2", "1uF" ]
+    },
+  "pins": [
+    "Gnd",
+    "Vout",
+    "Vin"
+    ]
+}
