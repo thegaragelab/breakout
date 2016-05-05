@@ -1,0 +1,15 @@
+{
+  "title": "Dual 3.3V LED Driver",
+  "jumpers": [ 3 ],
+  "components": {
+    "comp3": [ "D1", "Red LED" ],
+    "comp4": [ "D2", "Green LED" ],
+    "comp6": [ "R2", "120 Ohm" ],
+    "comp7": [ "R1", "150 Ohm" ]
+    },
+  "pins": [
+    "Gnd",
+    "Green",
+    "Red"
+    ]
+}
