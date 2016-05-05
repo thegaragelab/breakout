@@ -126,6 +126,27 @@ def process(data):
   # All done
   return tree
 
+def createPNG(name):
+  """ Create a PNG from the generated SVG file
+  """
+  try:
+    from wand.api import library
+    import wand.color
+    import wand.image
+  except:
+    return False
+  # Do the conversion
+  with wand.image.Image() as image:
+    with wand.color.Color('white') as background_color:
+      library.MagickSetBackgroundColor(image.wand,
+                                       background_color.resource)
+    image.read(filename=name + ".svg")
+    image.transform(resize='620x620>')
+    png_image = image.make_blob("png32")
+  with open(name + ".png", "wb") as out:
+      out.write(png_image)
+  return True
+
 #----------------------------------------------------------------------------
 # Main program
 #----------------------------------------------------------------------------
@@ -154,3 +175,6 @@ if __name__ == "__main__":
     result.write(name + ".svg")
   except Exception, ex:
     print "Error: Unable to process '%s' - %s" % (filename, str(ex))
+  # Attempt to convert to PNG
+  if not createPNG(name):
+    print "Unable to create PNG file, you will have to convert the SVG manually."
