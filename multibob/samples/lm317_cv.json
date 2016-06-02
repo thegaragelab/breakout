@@ -1,0 +1,14 @@
+{
+  "title": "LM317 Constant Voltage",
+  "jumpers": [ 4, 5 ],
+  "components": {
+    "comp2": [ "U1", "LM317" ],
+    "comp4": [ "R1", "" ],
+    "comp5": [ "R2", "" ]
+    },
+  "pins": [
+    "Gnd",
+    "Vout = 1.25x(1+R2/R1)",
+    "Vin"
+    ]
+}
