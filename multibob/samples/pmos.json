@@ -1,0 +1,13 @@
+{
+  "title": "PMOS Switch",
+  "jumpers": [ 3, 4, 5 ],
+  "components": {
+    "comp1": [ "U1", "NDS332P" ],
+    "comp3": [ "R1", "20K" ]
+    },
+  "pins": [
+    "Signal (=Vcc)",
+    "Load",
+    "Vcc"
+    ]
+}

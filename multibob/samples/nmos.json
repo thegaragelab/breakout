@@ -1,0 +1,13 @@
+{
+  "title": "NMOS Switch",
+  "jumpers": [ 3, 4, 5 ],
+  "components": {
+    "comp1": [ "U1", "2N7002" ],
+    "comp3": [ "R1", "20K" ]
+    },
+  "pins": [
+    "Signal",
+    "Load",
+    "Gnd"
+    ]
+}
